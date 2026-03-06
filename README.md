@@ -194,7 +194,29 @@ Notes:
 | HuBERT-large + MLP | IEMOCAP | Weighted F1 | 4 emotions | ~80-85% |
 | HuBERT-large + XGBoost | IEMOCAP | Weighted F1 | 4 emotions | ~85%+ |
 
-**Emotion Classes:** Neutral, Happy, Sad, Angry## 📈 Results
+**Emotion Classes:** Neutral, Happy, Sad, Angry
+
+### Gender Identification Task
+
+- **Model Details:** WavLM-base-plus embeddings + PCA + Logistic Regression
+- **Dataset:** LibriSpeech (dev-clean)
+- **Features:** Extracts embeddings using mean pooling, normalizes using standard scaler, reduces dimensionality with PCA, and classifies.
+- **Classes (2):** Male, Female
+
+### Intent Identification Task
+
+- **Model Details:** WavLM-base-plus embeddings + PCA + SVM Classifier
+- **Dataset:** SLURP (Spoken Language Understanding Researchers' Platform) or synthetic generation for specific targets.
+- **Features:** Identifies specific user commands and requests. Designed by Sahasra.
+- **Classes (12):** weather_query, music_query, alarm_set, timer_set, volume_up, volume_down, lights_on, lights_off, calendar_query, joke_request, news_request, time_query.
+
+### Speaker Identification Task
+
+- **Model Details:** XLSR-53 (Wav2Vec2 Large) embeddings + PCA + Logistic Regression
+- **Dataset:** Custom dataset / 40-speaker model
+- **Features:** Extracts embeddings using XLSR custom pooling (mean + std from layers 6-13), applies scaling and PCA, and classifies to find the unique speaker label among 40 speakers.
+
+## 📈 Results
 
 Results are saved in the `results/` directory:
 
