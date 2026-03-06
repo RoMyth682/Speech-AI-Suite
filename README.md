@@ -4,12 +4,14 @@ A production-ready, multi-task speech analysis suite (Emotion, Gender, Intent, S
 
 ## 🎯 Project Overview
 
-This project focuses on **emotion recognition** from speech by extracting fixed-dimensional speech representations using self-supervised models (WavLM and HuBERT) and training classifiers for emotion identification:
+This project provides a comprehensive suite for **Speech Analysis**, extracting fixed-dimensional speech representations using self-supervised models (WavLM, HuBERT, XLSR) to perform four main tasks:
 
-- **Emotion Recognition** using IEMOCAP and CREMA-D datasets
-- **Multiple Embedding Models:** WavLM-base and HuBERT-large
-- **Advanced Classifiers:** SVM, MLP, XGBoost with cross-validation
-- **Comprehensive Evaluation:** Accuracy, F1-score, confusion matrices, UMAP visualizations
+- **Emotion Recognition** using IEMOCAP and CREMA-D datasets.
+- **Gender Identification** using the LibriSpeech (dev-clean) dataset.
+- **Intent Identification** for understanding user commands, using the SLURP dataset.
+- **Speaker Identification** for recognizing 40 unique speakers.
+- **Advanced Classifiers:** SVM, MLP, Logistic Regression, and XGBoost with cross-validation.
+- **Comprehensive Evaluation:** Accuracy, F1-score, confusion matrices, UMAP visualizations.
 
 ## 📁 Project Structure
 
@@ -228,13 +230,14 @@ Results are saved in the `results/` directory:
 
 ## 👥 Team
 
-This project is developed by an AI/ML research team focused on emotion recognition from speech:
+This project is developed by an AI/ML research team focused on advanced speech analysis tasks:
 
-- **Lead Researcher** - Model architecture and emotion recognition pipeline
-- **Data Engineering** - IEMOCAP and CREMA-D dataset preparation
-- **Model Training** - Classifier optimization and cross-validation
-- **Evaluation** - Performance metrics and model comparison
-- **Visualization** - UMAP embeddings and result analysis
+- **Inthiyaz** - Model architecture, WavLM feature extraction pipeline, and Emotion Recognition.
+- **Sahasra** - Intent Classification and SLURP dataset preparation.
+- **Teammate A (Data Engineer)** - Dataset preparation across IEMOCAP, LibriSpeech, SLURP, and CommonVoice.
+- **Teammate B (Trainer)** - Classifier optimization and cross-validation for Emotion and Gender tasks.
+- **Teammate C (Evaluator)** - Performance metrics, benchmark comparison, and statistical testing.
+- **Teammate D (Visualizer)** - UMAP embeddings, 3D interactive plots, and result analysis.
 
 ## 📝 Citation
 

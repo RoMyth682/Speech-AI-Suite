@@ -37,8 +37,14 @@ Example (conceptual):
 # In src/2_wavlm_feature_extraction.py
 extractor = WavLMFeatureExtractor(model_name="microsoft/wavlm-base")  # IEMOCAP subset
 # For CREMA-D with a larger model, set:
-# extractor = WavLMFeatureExtractor(model_name="facebook/hubert-large-ll60k")
 ```
+
+## Architectures for Additional Tasks
+
+Alongside MLP/SVM for Emotion Recognition, the suite implements models for:
+- **Gender Identification:** WavLM-base-plus embeddings -> PCA -> Logistic Regression
+- **Intent Identification:** WavLM-base-plus embeddings -> PCA -> SVM Classifier
+- **Speaker Identification:** XLSR-53 (Wav2Vec2 Large) embeddings -> PCA -> Logistic Regression
 
 ## MLP Classifier Architecture
 

@@ -438,6 +438,29 @@ Average F1-Macro:    79.14% ± 0.12%
 
 ---
 
+## 🧩 Additional Supported Tasks
+
+In addition to Emotion Recognition, the suite supports three other related identification tasks via specialized models:
+
+### Gender Identification
+- **Model Details:** WavLM-base-plus embeddings + PCA + Logistic Regression
+- **Dataset:** LibriSpeech (dev-clean)
+- **Features:** Extracts embeddings using mean pooling, normalizes using standard scaler, reduces dimensionality with PCA, and classifies.
+- **Classes (2):** Male, Female
+
+### Intent Identification
+- **Model Details:** WavLM-base-plus embeddings + PCA + SVM Classifier
+- **Dataset:** SLURP (Spoken Language Understanding Researchers' Platform) or synthetic generation for specific targets.
+- **Features:** Identifies specific user commands and requests. Designed by Sahasra.
+- **Classes (12):** weather_query, music_query, alarm_set, timer_set, volume_up, volume_down, lights_on, lights_off, calendar_query, joke_request, news_request, time_query.
+
+### Speaker Identification
+- **Model Details:** XLSR-53 (Wav2Vec2 Large) embeddings + PCA + Logistic Regression
+- **Dataset:** Custom dataset / 40-speaker model
+- **Features:** Extracts embeddings using XLSR custom pooling (mean + std from layers 6-13), applies scaling and PCA, and classifies to find the unique speaker label among 40 speakers.
+
+---
+
 ## 🎓 **Research Paper Connections**
 
 ### **Paper**: "From Raw Speech to Fixed Representations"

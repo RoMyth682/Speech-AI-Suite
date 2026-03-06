@@ -148,6 +148,10 @@ This repository is ready to use in GitHub Codespaces Pro with GPU support!
    - Classes: English/Hindi
    - Metric: Accuracy
 
+5. **Speaker Identification**
+   - Classes: 40 unique speakers
+   - Metric: Accuracy
+
 ## 🗂️ Dataset Setup
 
 Place datasets in the following structure:
