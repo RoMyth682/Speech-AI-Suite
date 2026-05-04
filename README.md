@@ -23,17 +23,15 @@ This application allows users to upload audio files (WAV, MP3, FLAC, OGG, M4A, W
    - **Dataset:** Custom 40-speaker dataset
    - **Features:** Custom pooling (mean + std from layers 6-13)
 
-## 📁 Project Architecture
-
-The project follows a clean, MERN-like structure for the backend services:
+## 📁 Project Structure
 
 ```text
 Speech-AI-Suite/
 ├── backend/                          
 │   ├── app/                          # Flask web application
 │   │   ├── app.py                    # Main Flask entry point
-│   │   ├── templates/                # HTML templates for UI
-│   │   ├── static/                   # CSS and JavaScript
+│   │   ├── templates/                # Jinja2 HTML templates
+│   │   ├── static/                   # CSS, JavaScript, images
 │   │   └── uploads/                  # Temporary file processing
 │   │
 │   ├── services/                     # Inference services
@@ -41,7 +39,8 @@ Speech-AI-Suite/
 │   │   ├── gender.py                 # Gender classification service
 │   │   ├── intent.py                 # Intent classification service
 │   │   ├── speaker.py                # Speaker identification service
-│   │   └── utils/audio.py            # Audio processing utilities
+│   │   └── utils/
+│   │       └── audio.py              # Audio processing utilities
 │   │
 │   └── config.py                     # Centralized configuration
 │
@@ -49,11 +48,19 @@ Speech-AI-Suite/
 │   ├── models/                       # Stored .pkl, .pt, and scaler artifacts
 │   ├── data/                         # Datasets (IEMOCAP, CREMA-D, SLURP)
 │   ├── src/                          # Feature extraction and training scripts
-│   └── scripts/                      
+│   ├── scripts/                      # Utility and debug scripts
+│   ├── results/                      # Evaluation outputs and metrics
+│   └── embeddings/                   # Extracted embedding caches
 │
-├── docs/                             # Additional specialized documentation
-├── requirements.txt                  # Python dependencies
-└── README.md                         # This file
+├── docs/                             # All project documentation
+│   ├── md_files/                     # Task-specific documentation
+│   └── pdf_files/                    # PDF exports
+│
+├── tests/                            # Test files
+│
+├── .gitignore
+├── README.md
+└── requirements.txt
 ```
 
 ## 🚀 Getting Started
@@ -91,9 +98,10 @@ The application will start on `http://localhost:5000`. Navigate there in your we
 This project is developed by an AI/ML research team focused on advanced speech analysis:
 
 - **Inthiyaz** - Emotion Recognition
+- **Romith** - Speaker Identification
 - **Sahasra** - Intent Classification
 - **Rohin** - Gender Identification
-- **Romith** - Speaker Identification
+- **Rashmitha** - Technical Assistance
 
 ## 📝 Citation
 

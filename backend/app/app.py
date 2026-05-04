@@ -319,11 +319,6 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     debug_mode = os.environ.get("FLASK_DEBUG", True)
     
-    # Setup SSL context (optional)
-    ssl_context = None
-    if os.path.exists("cert.pem") and os.path.exists("key.pem"):
-        ssl_context = ("cert.pem", "key.pem")
-    
     # Start Flask app
     print(f"Starting Flask app on port {port}...")
     print(f"Debug mode: {debug_mode}")
@@ -332,6 +327,5 @@ if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
         port=port,
-        debug=debug_mode,
-        ssl_context=ssl_context
+        debug=debug_mode
     )

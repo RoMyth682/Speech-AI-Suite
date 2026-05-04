@@ -26,18 +26,16 @@ pip-delete-this-directory.txt
 *.cache
 
 # Flask app uploads
-app/uploads/
+backend/app/uploads/
 
-# Data (raw/processed) – exclude local datasets
-data/
-!data/processed/
-# Allow small metadata under processed if needed
-data/processed/*.csv
+# Data – exclude local datasets
+ml_models/data/
+!ml_models/data/samples/
 
 # Results – keep lightweight summaries, ignore heavy artifacts
-results/*.wav
-results/*.npy
-results/*.pt
+ml_models/results/*.wav
+ml_models/results/*.npy
+ml_models/results/*.pt
 
 # Hugging Face / transformers caches
 ~/.cache/huggingface/
@@ -48,9 +46,11 @@ node_modules/
 dist/
 build/
 
-# Ignore app static build artifacts generated locally
-app/static/*.map
-
 # SSL Certificates
 *.pem
+
+# Tests
+tests/__pycache__/
+
+# Misc temp files
 tempCodeRunnerFile.py
