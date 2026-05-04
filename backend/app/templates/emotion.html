@@ -103,26 +103,28 @@
   </div>
 
   <div class="col-lg-4">
-    <div class="card info-card p-3 mb-3">
-      <h6>Model Details</h6>
-      <ul class="small mb-0">
-        <li><strong>Embeddings:</strong> HuBERT-large</li>
+    <div class="card p-4 mb-3">
+      <h6 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Model Details</h6>
+      <ul class="list-unstyled mb-0 small lh-lg">
+        <li><strong>Model:</strong> HuBERT-large</li>
         <li><strong>Classifier:</strong> SVM (RBF)</li>
         <li><strong>Accuracy:</strong> 79.14%</li>
         <li><strong>Dimensions:</strong> 1024</li>
+        <li><strong>Classes:</strong> 4 (Neutral, Happy, Sad, Angry)</li>
       </ul>
     </div>
 
-    <div class="card tips-card p-3">
-      <h6>Tips</h6>
-      <ul class="small mb-0">
-        <li>Clear audio works best</li>
-        <li>3-30 seconds optimal</li>
-        <li>First run downloads model</li>
+    <div class="card p-4 mb-3">
+      <h6 class="fw-bold mb-3"><i class="bi bi-lightbulb me-2"></i>Tips</h6>
+      <ul class="list-unstyled small lh-lg mb-0">
+        <li>✓ Clear audio works best</li>
+        <li>✓ 3-30 seconds optimal length</li>
+        <li>✓ Low background noise improves accuracy</li>
+        <li>✓ First run downloads model (~1.2 GB)</li>
       </ul>
     </div>
 
-    <div class="card p-3 mt-3">
+    <div class="card p-3">
       <h6 class="mb-3">Why HuBERT-Large?</h6>
       <img src="{{ url_for('static', filename='img/emotion_model_comparison.png') }}" class="img-fluid rounded mb-2"
         alt="Emotion model comparison graph">

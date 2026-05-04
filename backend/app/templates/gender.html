@@ -106,17 +106,16 @@
   <!-- Right Sidebar (Model Info) -->
   <div class="col-lg-4">
     <div class="card p-4 mb-3">
-      <h6 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Model Information</h6>
+      <h6 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Model Details</h6>
       <ul class="list-unstyled mb-0 small lh-lg">
         <li><strong>Model:</strong> WavLM-base-plus</li>
         <li><strong>Classifier:</strong> Logistic Regression</li>
         <li><strong>Dimensions:</strong> 768 → 200 (PCA)</li>
         <li><strong>Classes:</strong> 2 (Male, Female)</li>
-        <li><strong>Status:</strong> <span class="badge bg-success">Active</span></li>
       </ul>
     </div>
 
-    <div class="card p-4">
+    <div class="card p-4 mb-3">
       <h6 class="fw-bold mb-3"><i class="bi bi-lightbulb me-2"></i>Tips</h6>
       <ul class="list-unstyled small lh-lg mb-0">
         <li>✓ Clear speech works best</li>
@@ -126,7 +125,7 @@
       </ul>
     </div>
 
-    <div class="card p-3 mt-3">
+    <div class="card p-3">
       <h6 class="mb-3">Why WavLM?</h6>
       <img src="{{ url_for('static', filename='img/gender_model_comparison.jpg') }}" class="img-fluid rounded mb-2"
         alt="Gender model comparison graph">

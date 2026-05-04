@@ -102,28 +102,28 @@
     </div>
 
     <div class="col-lg-4">
-        <div class="card info-card p-3 mb-3">
-            <h6>Model Details</h6>
-            <ul class="small mb-0">
-                <li><strong>Embeddings:</strong> WavLM Base</li>
+        <div class="card p-4 mb-3">
+            <h6 class="fw-bold mb-3"><i class="bi bi-info-circle me-2"></i>Model Details</h6>
+            <ul class="list-unstyled mb-0 small lh-lg">
+                <li><strong>Model:</strong> WavLM-base-plus</li>
                 <li><strong>Classifier:</strong> SVM</li>
-                <li><strong>Dataset:</strong> SLURP (Synthetic/Real)</li>
+                <li><strong>Dataset:</strong> SLURP</li>
                 <li><strong>Dimensions:</strong> 50 (PCA)</li>
+                <li><strong>Classes:</strong> 12 intent categories</li>
             </ul>
         </div>
 
-        <div class="card tips-card p-3">
-            <h6>Supported Intents</h6>
-            <ul class="small mb-0">
-                <li>weather_query</li>
-                <li>music_query</li>
-                <li>alarm_set</li>
-                <li>lights_on/off</li>
-                <li>...and more</li>
+        <div class="card p-4 mb-3">
+            <h6 class="fw-bold mb-3"><i class="bi bi-lightbulb me-2"></i>Tips</h6>
+            <ul class="list-unstyled small lh-lg mb-0">
+                <li>✓ Speak naturally as if giving a command</li>
+                <li>✓ 2-5 seconds of clear speech works best</li>
+                <li>✓ Low background noise improves accuracy</li>
+                <li>✓ First run downloads model (~380 MB)</li>
             </ul>
         </div>
 
-        <div class="card p-3 mt-3">
+        <div class="card p-3">
             <h6 class="mb-3">Why WavLM?</h6>
             <img src="{{ url_for('static', filename='img/intent_model_comparison.jpg') }}"
                 class="img-fluid rounded mb-2" alt="Intent model comparison graph">
